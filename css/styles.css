@@ -1,0 +1,103 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: black;
+}
+
+.qqw{
+  background-image: url('../images/second_bg.jpg');
+  /* Center the background */
+  background-position: center;
+    
+  /* Make sure the image doesn't repeat */
+  background-repeat: no-repeat;
+
+  /* Scale the image to cover the entire background */
+  background-size: cover;
+  
+  /* Ensure the whole viewport is used */
+  height: 100vh;
+  margin: 0;
+}
+nav {
+  padding-top: 100px;
+  width: 100%;
+}
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2813cb;; /* Dark background for navigation */
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+.logo-section {
+  position: absolute;
+  white-space: nowrap;
+  top: 500px;  /* Adjust as needed to place it where you want */
+  right: 100%;  /* Start from right outside the viewport */
+  font-size: 24px;
+  color: black;
+  animation: scrollText 10s linear infinite;  /* Animate for 10 seconds */
+}
+
+@keyframes scrollText {
+  0% {
+      right: 100%;  /* Start outside the right edge */
+  }
+  100% {
+      right: 0%;  /* Move completely to the left */
+  }
+}
+
+/* Banner styles to make it full-width */
+.banner {
+  position: absolute;  /* Distance from the top */
+    left: 10px; /* Distance from the left */
+}
+
+.banner img {
+  width: 100px;  /* Adjust the size of the image */
+  height: auto;  /* Maintain aspect ratio */
+}
+
+/* Main content styling */
+main {
+  padding: 20px;
+  color: white
+}
+
+/* Footer styling */
+footer {
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+p{
+  color: white
+}
