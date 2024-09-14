@@ -5,10 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MF Website - Home</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .carousel-content {
+            display: none;
+            font-size: 1.5em;
+            padding: 20px;
+        }
+        .carousel-content.active {
+            display: block;
+        }
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .carousel-button.prev {
+            left: 0;
+        }
+        .carousel-button.next {
+            right: 0;
+        }
+        .sip-calculator, .snv-stocks {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .sip-calculator input, .snv-stocks input {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            max-width: 400px;
+        }
+        .sip-calculator button, .snv-stocks button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .sip-calculator .result, .snv-stocks .address, .snv-stocks .contact-info {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        .snv-stocks {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .snv-stocks .box {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            max-width: 300px;
+        }
+        .snv-stocks h3 {
+            margin-top: 0;
+        }
+        .snv-stocks a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        .snv-stocks a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <header>
-        
         <div class="banner">
             <img src="images/images.jpg" alt="Banner Image">
         </div>
@@ -27,11 +108,50 @@
         </nav>
     </header>
 
-    
-
-    <main class = 'qqw'>
+    <main class='qqw'>
         <h2>Welcome to MF</h2>
         <p>We're here to guide you. This is the home page of our website.</p>
+        
+        <div class="carousel">
+            <div class="carousel-content active">Equity Market - Get in Touch</div>
+            <div class="carousel-content">Bond Market - Get in Touch</div>
+            <div class="carousel-content">Mutual Fund - Get in Touch</div>
+            <div class="carousel-content">Let's Build Wealth - Get in Touch</div>
+            <button class="carousel-button prev" onclick="prevSlide()">&#9664;</button>
+            <button class="carousel-button next" onclick="nextSlide()">&#9654;</button>
+        </div>
+        
+        <div class="sip-calculator">
+            <h2>SIP Calculator</h2>
+            <form id="sip-form">
+                <input type="number" id="amount" placeholder="Monthly Investment Amount" required>
+                <input type="number" id="rate" placeholder="Expected Annual Rate of Return (%)" required>
+                <input type="number" id="years" placeholder="Investment Duration (Years)" required>
+                <button type="button" onclick="calculateSIP()">Calculate</button>
+                <div class="result" id="sip-result"></div>
+            </form>
+        </div>
+
+        <div class="snv-stocks">
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
+                <a href="why-choose-us.html">Why us</a>
+                <a href="services.html">Products/Services</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="#">Get in Touch</a>
+            </div>
+            <div class="box">
+                <h3>Address</h3>
+                <p>19, Rn Mukherjee Road, Mezzanine Floor Between 2nd And 1st, Hanuman Estate, Kolkata – 700001, West Bengal</p>
+            </div>
+            <div class="box">
+                <h3>Contact Information</h3>
+                <p>Email: <a href="mailto:support@snvstocks.com">support@snvstocks.com</a></p>
+                <p>Phone: <a href="tel:+9830022067">9830022067</a> (09:00 AM – 06:00 PM)</p>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -40,5 +160,41 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-content');
+            if (index >= slides.length) index = 0;
+            if (index < 0) index = slides.length - 1;
+
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            currentIndex = index;
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+
+        function calculateSIP() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const rate = parseFloat(document.getElementById('rate').value) / 100 / 12;
+            const years = parseInt(document.getElementById('years').value);
+            const months = years * 12;
+
+            let futureValue = 0;
+            for (let i = 0; i < months; i++) {
+                futureValue = (futureValue + amount) * (1 + rate);
+            }
+
+            document.getElementById('sip-result').innerText = `Future Value of your SIP: ₹${futureValue.toFixed(2)}`;
+        }
+    </script>
 </body>
 </html>

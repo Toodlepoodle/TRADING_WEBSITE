@@ -3,8 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MF Website - Why Choose Us</title>
+    <title>MF Website - Contact Us</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .contact-container h2 {
+            margin-top: 0;
+        }
+        .contact-details {
+            margin-bottom: 20px;
+        }
+        .contact-details h3 {
+            margin-top: 0;
+        }
+        .contact-details .info {
+            margin-bottom: 10px;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #555;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,15 +74,43 @@
         </nav>
     </header>
 
-    <main class = 'qqw'>
-        <h2>Why Choose Us</h2>
-        <p>Here are some reasons why you should choose our services:</p>
-        <ul>
-            <li>Experienced team</li>
-            <li>Customized solutions</li>
-            <li>Excellent customer service</li>
-            <!-- Add more reasons as needed -->
-        </ul>
+    <main class="contact-container">
+        <h2>Contact Us</h2>
+        <p>Contact Us Anytime - Our Friendly Team Is Here to Assist You Round the Clock.</p>
+        
+        <div class="contact-details">
+            <div class="info">
+                <h3>Location</h3>
+                <p>19, Rn Mukherjee Road, Mezzanine Floor Between 2nd And 1st, Hanuman Estate, Kolkata – 700001, West Bengal</p>
+            </div>
+            <div class="info">
+                <h3>Email</h3>
+                <p><a href="mailto:support@snvstocks.com">support@snvstocks.com</a></p>
+            </div>
+            <div class="info">
+                <h3>WhatsApp Us</h3>
+                <p><a href="https://wa.me/9830022067">9830022067</a></p>
+            </div>
+            <div class="info">
+                <h3>Phone</h3>
+                <p><a href="tel:98380022067">98380022067</a></p>
+            </div>
+            <div class="info">
+                <h3>Office Hour</h3>
+                <p>09:00 AM – 06:00 PM</p>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h3>Let's Talk</h3>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Name" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="tel" id="mobile" placeholder="Mobile" required>
+                <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </div>
     </main>
 
     <footer>
