@@ -3,8 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MF Website - Why Choose Us</title>
+    <title>MF Website - Services</title>
     <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Navigation styling */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav ul li {
+            padding: 14px 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        /* Main content styling */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h2 {
+            margin-top: 0;
+            color: black;
+        }
+
+        .section {
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+            color: black; /* Sets text color to black within .section */
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+            color: black; /* Sets text color to black within .section ul */
+        }
+
+        .section li {
+            margin-bottom: 10px;
+            color: black; /* Sets text color to black within .section li */
+        }
+
+        .section p {
+            margin-bottom: 10px;
+            color: black; /* Sets text color to black within .section p */
+        }
+
+        .section blockquote {
+            margin: 20px 0;
+            padding: 20px;
+            border-left: 4px solid #333;
+            background-color: #f4f4f4;
+            color: black; /* Sets text color to black within .section blockquote */
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-about, .footer-quick-links, .footer-contact {
+            flex: 1;
+            min-width: 250px;
+            margin: 10px;
+            text-align: left;
+        }
+
+        .footer-about p, .footer-quick-links ul li, .footer-contact p {
+            margin-bottom: 10px;
+        }
+
+        .footer-quick-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-quick-links ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-quick-links ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-contact a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,22 +156,78 @@
         </nav>
     </header>
 
-    <main class = 'qqw'>
-        <h2>Why Choose Us</h2>
-        <p>Here are some reasons why you should choose our services:</p>
-        <ul>
-            <li>Experienced team</li>
-            <li>Customized solutions</li>
-            <li>Excellent customer service</li>
-            <!-- Add more reasons as needed -->
-        </ul>
+    <main>
+        <section class="section">
+            <h2>Margin Funding</h2>
+            <p><strong>How Margin Funding Works</strong></p>
+            <p>Investors can leverage their existing securities as collateral to borrow funds from the brokerage firm. The borrowed funds can be used to purchase additional securities, potentially amplifying investment returns.</p>
+            <p><strong>Key Features</strong></p>
+            <ul>
+                <li>Margin funding allows investors to increase their buying power and potentially capitalize on market opportunities.</li>
+                <li>Interest is charged on the borrowed funds, and investors must maintain a minimum margin level to avoid margin calls and potential liquidation of securities.</li>
+            </ul>
+            <p><strong>Benefits</strong></p>
+            <ul>
+                <li>Access to additional funds for investment without liquidating existing holdings.</li>
+                <li>Flexibility to take advantage of market movements and trading opportunities.</li>
+            </ul>
+            <p><strong>Risks</strong></p>
+            <ul>
+                <li>Margin trading involves the risk of magnified losses if investments decline in value.</li>
+                <li>Margin calls may require investors to deposit additional funds or sell securities to meet minimum margin requirements.</li>
+            </ul>
+            <p><strong>Margin Funding Services of SNV Stock Broking</strong></p>
+            <p>At SNV STOCK BROKING PVT LTD, we offer margin funding services tailored to meet the diverse needs of investors. Our experienced team provides guidance and support to help clients navigate the complexities of margin trading and manage risks effectively.</p>
+        </section>
+
+        <section class="section">
+            <h2>Securities Lending and Borrowing</h2>
+            <p><strong>Securities Lending</strong></p>
+            <p>Securities lending involves the temporary transfer of securities from one party (the lender) to another (the borrower) in exchange for collateral. Lenders earn a fee for lending their securities, while borrowers obtain access to securities they may not otherwise have.</p>
+            <p><strong>Borrowing Securities</strong></p>
+            <p>Borrowers typically engage in securities borrowing to facilitate short-selling strategies, hedge against potential losses, or meet settlement obligations. Borrowed securities must be returned to the lender at the end of the borrowing period, usually with interest or fees.</p>
+            <p><strong>Key Benefits</strong></p>
+            <ul>
+                <li>For lenders: Securities lending provides an additional revenue stream and can enhance portfolio returns.</li>
+                <li>For borrowers: Access to borrowed securities enables them to execute various trading and investment strategies.</li>
+            </ul>
+            <p><strong>Risk Management</strong></p>
+            <ul>
+                <li>Securities lending transactions are governed by legal agreements that outline terms and conditions, including collateral requirements and indemnification provisions.</li>
+                <li>Both lenders and borrowers must carefully assess counterparty risk and implement risk management measures to mitigate potential losses.</li>
+            </ul>
+            <p><strong>Securities Lending Services of SNV Stock Broking</strong></p>
+            <p>At SNV STOCK BROKING PVT LTD, we offer securities lending and borrowing services designed to meet the diverse needs of institutional and individual investors. Our experienced team provides guidance and support throughout the lending and borrowing process, ensuring transparency, efficiency, and risk mitigation.</p>
+        </section>
+
+        <!-- Add additional sections here for other services like PMS, IPOs, Mutual Funds, etc. -->
+
     </main>
 
     <footer>
-        <p>News update: Recent Calendar</p>
-        <p>Note: On coming days, we will add Tutorial classes.</p>
+        <div class="footer-container">
+            <div class="footer-about">
+                <p><strong>SNV STOCKS</strong></p>
+                <p>At SNV STOCKS BROKING PVT LTD, we empower you to navigate the dynamic world of investments with confidence and clarity. As seasoned experts in the financial markets, we offer personalized guidance and tailored solutions to help you achieve your investment goals.</p>
+            </div>
+            <div class="footer-quick-links">
+                <p><strong>Quick Links</strong></p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="why-choose-us.html">Why Choose Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="graphs.html">Stock Graphs</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <p><strong>Contact Us</strong></p>
+                <p>Address: 123 Financial Street, Mumbai, India</p>
+                <p>Phone: +91 123 456 7890</p>
+                <p>Email: <a href="mailto:info@snvstocks.com">info@snvstocks.com</a></p>
+            </div>
+        </div>
     </footer>
-
-    <script src="js/script.js"></script>
 </body>
 </html>

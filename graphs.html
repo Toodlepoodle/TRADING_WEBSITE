@@ -6,6 +6,63 @@
     <title>MF Website - Stock Graphs</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .logo-section {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            font-size: 1.2em;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav ul li {
+            padding: 14px 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .chart-container {
+            margin-bottom: 40px;
+        }
+
+        .chart-container canvas {
+            width: 100%;
+            height: 400px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -38,8 +95,31 @@
     </main>
 
     <footer>
-        <p>News update: Recent Calendar</p>
-        <p>Note: On coming days, we will add Tutorial classes.</p>
+        <div class="footer-container">
+            <div class="footer-about">
+                <p><strong>SNV STOCKS</strong></p>
+                <p>At SNV STOCKS BROKING PVT LTD, we empower you to navigate the dynamic world of investments with confidence and clarity. As seasoned experts in the financial markets, we offer personalized guidance and tailored solutions to help you achieve your investment goals.</p>
+            </div>
+            <div class="footer-quick-links">
+                <p><strong>Quick Links</strong></p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="why-choose-us.html">Why Choose Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="graphs.html">Stock Graphs</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <p><strong>Get in Touch</strong></p>
+                <p>19, Rn Mukherjee Road, Mezzanine Floor Between 2nd And 1st, Hanuman Estate, Kolkata – 700001, West Bengal</p>
+                <p>Email: <a href="mailto:support@snvstocks.com">support@snvstocks.com</a></p>
+                <p>Phone: <a href="tel:9830022067">9830022067</a></p>
+                <p>Business Hours: 09:00 AM – 06:00 PM</p>
+            </div>
+        </div>
+        <p>&copy; 2024 MF Website. All rights reserved.</p>
     </footer>
 
     <script src="js/script.js"></script>

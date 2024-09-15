@@ -6,34 +6,168 @@
     <title>MF Website - Why Choose Us</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        .core-values, .services, .testimonials {
-            max-width: 800px;
+        /* Navigation styling */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav ul li {
+            padding: 14px 20px;
+        }
+
+        nav ul li a {
+            color: white; /* Set text color to black */
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        /* Carousel section */
+        .carousel {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background-color: #333;
+            color: black; /* Set text color to black */
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+        }
+
+        .carousel-content {
+            display: none;
+            width: 100%;
+            text-align: center;
+        }
+
+        .carousel-content.active {
+            display: block;
+            color: black; /* Set text color to black */
+        }
+
+        /* Core Values and Services Styling */
+        .core-values, .services, .testimonials, .why-choose-us, .newsletter {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 40px 20px;
+            color: black; /* Set text color to black */
+        }
+
+        .core-values, .services {
             background-color: #f4f4f4;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
         }
-        .core-values h3, .services h3, .testimonials h3 {
+
+        .core-values h2, .services h2, .testimonials h2, .why-choose-us h2, .newsletter h2 {
             margin-top: 0;
+            color: black; /* Set header color to black */
         }
+
         .core-values ul, .services ul {
             list-style: none;
             padding: 0;
         }
+
         .core-values li, .services li {
             margin-bottom: 10px;
         }
-        .testimonials {
-            background-color: #ffffff;
-            box-shadow: none;
-        }
+
         .testimonials blockquote {
             margin: 20px 0;
             padding: 20px;
             border-left: 4px solid #333;
             background-color: #f4f4f4;
         }
+
+        /* Footer styling */
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: white; /* Set footer text color to white */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: 50px; /* Add spacing above the footer */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-about, .footer-quick-links, .footer-contact {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+    text-align: left;
+}
+
+.footer-about p {
+    margin-bottom: 10px;
+}
+
+.footer-quick-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-quick-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-quick-links ul li a {
+    color: white; /* Ensure links in the footer are white */
+    text-decoration: none;
+}
+
+.footer-quick-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact a {
+    color: white; /* Ensure links in the footer are white */
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Adjust for small screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        main {
+            flex: 1;
+        }
+
     </style>
 </head>
 <body>
@@ -56,35 +190,34 @@
         </nav>
     </header>
 
-    <main class='qqw'>
-        <h2>Welcome to Invesmart!</h2>
-        <p>Empowering Your Financial Future With Expertise And Innovation</p>
-        <p>At SNV Stock Broking Pvt Ltd, we pride ourselves on being a trusted partner for investors seeking to navigate the dynamic world of financial markets. Founded on the principles of integrity, innovation, and excellence, we strive to deliver exceptional services tailored to the unique needs of our clients.</p>
-        
+    <div class="carousel">
+        <div class="carousel-content active">
+            Why Us
+        </div>
+    </div>
+
+    <main>
         <section class="core-values">
-            <h3>Core Values</h3>
+            <h2>Core Values</h2>
             <ul>
                 <li>Integrity</li>
                 <li>Innovation</li>
                 <li>Excellence</li>
-                <!-- Add more core values as needed -->
             </ul>
         </section>
 
         <section class="services">
-            <h3>Our Services</h3>
+            <h2>Our Services</h2>
             <p>SNV Stock Broking Pvt Ltd offers a comprehensive range of services designed to meet the diverse needs of investors:</p>
             <ul>
                 <li>Investment Advisory</li>
                 <li>Portfolio Management</li>
                 <li>Market Analysis</li>
-                <!-- Add more services as needed -->
             </ul>
         </section>
 
         <section class="why-choose-us">
             <h2>Why Choose Us</h2>
-            <p>With SNV STOCK BROKING PVT LTD, you gain access to:</p>
             <ul>
                 <li>Expertise: Our team consists of seasoned professionals with extensive experience in financial markets, providing you with expert guidance and support every step of the way.</li>
                 <li>Client-Centric Approach: We prioritize the needs and preferences of our clients, offering personalized solutions and dedicated support to ensure a seamless investing experience.</li>
@@ -100,15 +233,44 @@
             <blockquote>
                 <p>"The technology-driven solutions offered by SNV have greatly simplified our investment management. Highly recommended!" - Client B</p>
             </blockquote>
-            <!-- Add more testimonials as needed -->
+        </section>
+
+        <section class="newsletter">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Stay Updated With Our Latest Updates!</p>
+            <a href="subscribe.html" class="know-more-btn">Subscribe Now</a>
         </section>
     </main>
 
     <footer>
-        <p>News update: Recent Calendar</p>
-        <p>Note: On coming days, we will add Tutorial classes.</p>
+        <div class="footer-container">
+            <div class="footer-about">
+                <p><strong>SNV STOCKS</strong></p>
+                <p>At SNV STOCKS BROKING PVT LTD, we empower you to navigate the dynamic world of investments with confidence and clarity. As seasoned experts in the financial markets, we offer personalized guidance and tailored solutions to help you achieve your investment goals.</p>
+            </div>
+            <div class="footer-quick-links">
+                <p><strong>Quick Links</strong></p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="why-choose-us.html">Why Us</a></li>
+                    <li><a href="services.html">Products/Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <p><strong>Get in Touch</strong></p>
+                <p>19, Rn Mukherjee Road, Mezzanine Floor Between 2nd And 1st, Hanuman Estate, Kolkata – 700001, West Bengal</p>
+                <p>Email: <a href="mailto:support@snvstocks.com">support@snvstocks.com</a></p>
+                <p>Phone: <a href="tel:9830022067">9830022067</a></p>
+                <p>Business Hours: 09:00 AM – 06:00 PM</p>
+            </div>
+        </div>
+        <p>© 2024 SNV Stocks. All Rights Reserved.</p>
+        <p>Follow Us:</p>
+        <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">YouTube</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a>
     </footer>
-
+    
     <script src="js/script.js"></script>
 </body>
 </html>

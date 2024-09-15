@@ -6,21 +6,63 @@
     <title>MF Website - Home</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
+        /* Remove any padding/margin from the body and main content */
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation styling */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav ul li {
+            padding: 14px 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        /* Carousel section - Full width and right below the navbar */
         .carousel {
             position: relative;
             width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
+            height: 300px; /* Height remains unchanged */
+            background-color: #333;
+            color: white;
             text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            margin: 0; /* Ensures there's no margin between carousel and navbar */
+            padding: 0;
         }
+
         .carousel-content {
             display: none;
-            font-size: 1.5em;
-            padding: 20px;
+            width: 100%;
+            text-align: center;
         }
+
         .carousel-content.active {
             display: block;
         }
+
+        /* Buttons for carousel navigation */
         .carousel-button {
             position: absolute;
             top: 50%;
@@ -31,61 +73,190 @@
             padding: 10px;
             cursor: pointer;
         }
+
         .carousel-button.prev {
             left: 0;
         }
+
         .carousel-button.next {
             right: 0;
         }
-        .sip-calculator, .snv-stocks {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-            text-align: center;
-        }
-        .sip-calculator input, .snv-stocks input {
-            margin: 10px 0;
-            padding: 10px;
-            width: 100%;
-            max-width: 400px;
-        }
-        .sip-calculator button, .snv-stocks button {
-            padding: 10px 20px;
-            background-color: #333;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        .sip-calculator .result, .snv-stocks .address, .snv-stocks .contact-info {
+
+        /* Get in touch button styling */
+        .get-in-touch-btn {
+            display: inline-block;
             margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #04AA6D;
+            color: white;
+            text-decoration: none;
             font-size: 1.2em;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
         }
-        .snv-stocks {
+
+        .get-in-touch-btn:hover {
+            background-color: #028a57;
+        }
+
+        /* Feature boxes below the carousel */
+        .feature-boxes {
             display: flex;
             justify-content: space-between;
+            margin: 40px auto;
+            padding: 0 20px;
+            max-width: 1200px; /* Set the maximum width for better alignment */
+        }
+
+        .feature-boxes .box {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-boxes .box:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-boxes h3 {
+            font-size: 1.5em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .feature-boxes p {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        /* New section for investment goals */
+        .investment-goals {
+            text-align: center;
+            background-color: #f0f0f0;
+            padding: 40px 20px;
+            margin: 40px auto;
+        }
+
+        .investment-goals h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .goals-list {
+            display: flex;
+            justify-content: space-around;
             flex-wrap: wrap;
         }
-        .snv-stocks .box {
-            flex: 1;
+
+        .goals-list div {
+            flex: 1 1 30%;
+            background-color: white;
+            border-radius: 10px;
             margin: 10px;
             padding: 20px;
-            background-color: #f4f4f4;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            max-width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
-        .snv-stocks h3 {
-            margin-top: 0;
+
+        .goals-list div:hover {
+            transform: translateY(-5px);
         }
-        .snv-stocks a {
-            display: block;
-            color: #333;
-            text-decoration: none;
+
+        .goals-list h3 {
+            font-size: 1.5em;
             margin-bottom: 10px;
         }
-        .snv-stocks a:hover {
-            text-decoration: underline;
+
+        .goals-list p {
+            font-size: 1em;
+            color: #666;
         }
+
+        .know-more-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #04AA6D;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .know-more-btn:hover {
+            background-color: #028a57;
+        }
+        /* Footer styling */
+footer {
+    background-color: #333;
+    color: white; /* Set footer text color to white */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    margin-top: 50px; /* Add spacing above the footer */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-about, .footer-quick-links, .footer-contact {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+    text-align: left;
+}
+
+.footer-about p {
+    margin-bottom: 10px;
+}
+
+.footer-quick-links ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-quick-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-quick-links ul li a {
+    color: white; /* Ensure links in the footer are white */
+    text-decoration: none;
+}
+
+.footer-quick-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact a {
+    color: white; /* Ensure links in the footer are white */
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Adjust for small screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -108,78 +279,140 @@
         </nav>
     </header>
 
-    <main class='qqw'>
-        <h2>Welcome to MF</h2>
-        <p>We're here to guide you. This is the home page of our website.</p>
-        
-        <div class="carousel">
-            <div class="carousel-content active">Equity Market - Get in Touch</div>
-            <div class="carousel-content">Bond Market - Get in Touch</div>
-            <div class="carousel-content">Mutual Fund - Get in Touch</div>
-            <div class="carousel-content">Let's Build Wealth - Get in Touch</div>
-            <button class="carousel-button prev" onclick="prevSlide()">&#9664;</button>
-            <button class="carousel-button next" onclick="nextSlide()">&#9654;</button>
+    <!-- Carousel -->
+    <div class="carousel">
+        <div class="carousel-content active">
+            Equity Market - Get in Touch
+            <br>
+            <a href="contact.html" class="get-in-touch-btn">Get in Touch</a>
         </div>
-        
-        <div class="sip-calculator">
-            <h2>SIP Calculator</h2>
-            <form id="sip-form">
-                <input type="number" id="amount" placeholder="Monthly Investment Amount" required>
-                <input type="number" id="rate" placeholder="Expected Annual Rate of Return (%)" required>
-                <input type="number" id="years" placeholder="Investment Duration (Years)" required>
-                <button type="button" onclick="calculateSIP()">Calculate</button>
-                <div class="result" id="sip-result"></div>
-            </form>
+        <div class="carousel-content">
+            Bond Market - Get in Touch
+            <br>
+            <a href="contact.html" class="get-in-touch-btn">Get in Touch</a>
         </div>
+        <div class="carousel-content">
+            Mutual Fund - Get in Touch
+            <br>
+            <a href="contact.html" class="get-in-touch-btn">Get in Touch</a>
+        </div>
+        <div class="carousel-content">
+            Let's Build Wealth - Get in Touch
+            <br>
+            <a href="contact.html" class="get-in-touch-btn">Get in Touch</a>
+        </div>
+        <button class="carousel-button prev" onclick="prevSlide()">&#9664;</button>
+        <button class="carousel-button next" onclick="nextSlide()">&#9654;</button>
+    </div>
 
-        <div class="snv-stocks">
-            <div class="box">
-                <h3>Quick Links</h3>
-                <a href="index.html">Home</a>
-                <a href="why-choose-us.html">Why us</a>
-                <a href="services.html">Products/Services</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="#">Get in Touch</a>
+    <!-- Feature Boxes -->
+    <div class="feature-boxes">
+        <div class="box">
+            <h3>Wide Product Range</h3>
+            <p>Unlock an extensive array of investment opportunities that are expertly tailored to your unique financial goals, providing you with maximum versatility and flexibility to achieve growth and success in your portfolio with the unparalleled services offered by SNV Stock Broking. With our cutting-edge capabilities and deep industry experience, you can rest assured that you are making informed and beneficial investment decisions for both your short-term and long-term financial objectives.</p>
+        </div>
+        <div class="box">
+            <h3>Innovative Tools</h3>
+            <p>Empower your investment strategy like never before with cutting-edge tools and technologies, paving the way for you to navigate the market landscape like a pro with the help of SNV Stock Broking. With our top-of-the-line resources and expert guidance, you can make informed decisions that will help you achieve your financial goals. So whether you're a seasoned investor or just starting out, SNV Stock Broking has got you covered every step of the way.</p>
+        </div>
+        <div class="box">
+            <h3>Dedicated Support</h3>
+            <p>Count on our dedicated support team for personalized guidance and unwavering assistance throughout your investment journey with SNV Stock Broking. We have an experienced team who will be dedicatedly looking after your portfolio for better balance and preferred investment styles, considering future prospects.</p>
+        </div>
+    </div>
+
+    <!-- New Investment Goals Section -->
+    <div class="investment-goals">
+        <h2>We're Here to Help You</h2>
+        <p>Give Shape To Your Investments, Create A Perfect Goal Now</p>
+        <div class="goals-list">
+            <div>
+                <h3>Life Insurance</h3>
+                <p>Secure your future with the best life insurance plans.</p>
             </div>
-            <div class="box">
-                <h3>Address</h3>
-                <p>19, Rn Mukherjee Road, Mezzanine Floor Between 2nd And 1st, Hanuman Estate, Kolkata – 700001, West Bengal</p>
+            <div
+            <div>
+                <h3>Home Planning</h3>
+                <p>Plan your dream home with our tailored investment solutions.</p>
             </div>
-            <div class="box">
-                <h3>Contact Information</h3>
-                <p>Email: <a href="mailto:support@snvstocks.com">support@snvstocks.com</a></p>
-                <p>Phone: <a href="tel:+9830022067">9830022067</a> (09:00 AM – 06:00 PM)</p>
+            <div>
+                <h3>Child's Education</h3>
+                <p>Invest in your child's future education with confidence.</p>
+            </div>
+            <div>
+                <h3>Marriage</h3>
+                <p>Plan and save for the most important day of your life.</p>
+            </div>
+            <div>
+                <h3>Retirement</h3>
+                <p>Ensure a comfortable and secure retirement with our plans.</p>
+            </div>
+            <div>
+                <h3>Dream Vacation</h3>
+                <p>Save for that dream vacation you've always wanted.</p>
             </div>
         </div>
-    </main>
+        <a href="contact.html" class="know-more-btn">Know More</a>
+    </div>
 
-    <footer>
-        <p>News update: Recent Calendar</p>
-        <p>Note: On coming days, we will add Tutorial classes.</p>
-    </footer>
+    <!-- SIP Calculator -->
+    <div class="sip-calculator">
+        <h2>SIP Calculator</h2>
+        <form id="sip-form">
+            <label for="amount">Monthly Investment Amount: ₹<span id="amount-value">1000</span></label>
+            <input type="range" id="amount" min="500" max="50000" value="1000" step="100" oninput="updateAmountValue()" required>
 
-    <script src="js/script.js"></script>
+            <label for="rate">Expected Annual Rate of Return (%): <span id="rate-value">8</span>%</label>
+            <input type="range" id="rate" min="1" max="20" value="8" step="0.1" oninput="updateRateValue()" required>
+
+            <label for="years">Investment Duration (Years): <span id="years-value">10</span></label>
+            <input type="range" id="years" min="1" max="30" value="10" step="1" oninput="updateYearsValue()" required>
+
+            <button type="button" onclick="calculateSIP()">Calculate</button>
+            <div class="result" id="sip-result"></div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-about">
+            <p><strong>SNV STOCKS</strong></p>
+            <p>At SNV STOCKS BROKING PVT LTD, we empower you to navigate the dynamic world of investments with confidence and clarity. As seasoned experts in the financial markets, we offer personalized guidance and tailored solutions to help you achieve your investment goals.</p>
+        </div>
+        <div class="footer-quick-links">
+            <p><strong>Quick Links</strong></p>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="why-choose-us.html">Why Choose Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                <li><a href="graphs.html">Stock Graphs</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <p><strong>Get in Touch</strong></p>
+            <p>19, Rn Mukherjee Road, Mezzanine Floor Between 2nd And 1st, Hanuman Estate, Kolkata – 700001, West Bengal</p>
+            <p>Email: <a href="mailto:support@snvstocks.com">support@snvstocks.com</a></p>
+            <p>Phone: <a href="tel:9830022067">9830022067</a></p>
+            <p>Business Hours: 09:00 AM – 06:00 PM</p>
+        </div>
+    </div>
+    <p>&copy; 2024 MF Website. All rights reserved.</p>
+</footer>
+
     <script>
-        let currentIndex = 0;
-
-        function showSlide(index) {
-            const slides = document.querySelectorAll('.carousel-content');
-            if (index >= slides.length) index = 0;
-            if (index < 0) index = slides.length - 1;
-
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === index);
-            });
-            currentIndex = index;
+        function updateAmountValue() {
+            document.getElementById('amount-value').innerText = document.getElementById('amount').value;
         }
 
-        function nextSlide() {
-            showSlide(currentIndex + 1);
+        function updateRateValue() {
+            document.getElementById('rate-value').innerText = document.getElementById('rate').value;
         }
 
-        function prevSlide() {
-            showSlide(currentIndex - 1);
+        function updateYearsValue() {
+            document.getElementById('years-value').innerText = document.getElementById('years').value;
         }
 
         function calculateSIP() {
@@ -193,8 +426,33 @@
                 futureValue = (futureValue + amount) * (1 + rate);
             }
 
-            document.getElementById('sip-result').innerText = `Future Value of your SIP: ₹${futureValue.toFixed(2)}`;
+            document.getElementById('sip-result').innerHTML = `Future Value: ₹${futureValue.toFixed(2)}`;
         }
+
+        // Carousel functionality
+        let slideIndex = 0;
+
+        function showSlide(index) {
+            const slides = document.getElementsByClassName('carousel-content');
+            if (index >= slides.length) slideIndex = 0;
+            if (index < 0) slideIndex = slides.length - 1;
+            for (let slide of slides) {
+                slide.classList.remove('active');
+            }
+            slides[slideIndex].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(++slideIndex);
+        }
+
+        function prevSlide() {
+            showSlide(--slideIndex);
+        }
+
+        // Initialize carousel
+        showSlide(slideIndex);
+        setInterval(nextSlide, 5000); // Change slide every 5 seconds
     </script>
 </body>
 </html>

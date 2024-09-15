@@ -3,17 +3,18 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background-color: black;
+  background-color: white;
 }
 
-.qqw{
-  background-image: url('../images/second_bg.jpg');
+.qqw {
+  /* background-image: url('../images/second_bg.jpg'); */
+  
   /* Center the background */
   background-position: center;
-    
+  
   /* Make sure the image doesn't repeat */
   background-repeat: no-repeat;
-
+  
   /* Scale the image to cover the entire background */
   background-size: cover;
   
@@ -21,16 +22,18 @@ body {
   height: 100vh;
   margin: 0;
 }
+
 nav {
   padding-top: 100px;
   width: 100%;
 }
+
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #2813cb;; /* Dark background for navigation */
+  background-color: #2813cb; /* Dark background for navigation */
 }
 
 nav ul li {
@@ -52,6 +55,7 @@ nav li a:hover:not(.active) {
 .active {
   background-color: #04AA6D;
 }
+
 .logo-section {
   position: absolute;
   white-space: nowrap;
@@ -64,17 +68,17 @@ nav li a:hover:not(.active) {
 
 @keyframes scrollText {
   0% {
-      right: 100%;  /* Start outside the right edge */
+    right: 100%;  /* Start outside the right edge */
   }
   100% {
-      right: 0%;  /* Move completely to the left */
+    right: 0%;  /* Move completely to the left */
   }
 }
 
 /* Banner styles to make it full-width */
 .banner {
   position: absolute;  /* Distance from the top */
-    left: 10px; /* Distance from the left */
+  left: 10px; /* Distance from the left */
 }
 
 .banner img {
@@ -85,7 +89,7 @@ nav li a:hover:not(.active) {
 /* Main content styling */
 main {
   padding: 20px;
-  color: white
+  color: white;
 }
 
 /* Footer styling */
@@ -98,6 +102,7 @@ footer {
   bottom: 0;
   width: 100%;
 }
-p{
-  color: white
+
+p {
+  color: white;
 }

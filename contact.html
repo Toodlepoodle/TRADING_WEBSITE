@@ -6,51 +6,145 @@
     <title>MF Website - Contact Us</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
-        .contact-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f4f4f4;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+        /* Navigation styling */
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #333;
         }
-        .contact-container h2 {
-            margin-top: 0;
+
+        nav ul li {
+            padding: 14px 20px;
         }
-        .contact-details {
-            margin-bottom: 20px;
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
         }
-        .contact-details h3 {
-            margin-top: 0;
+
+        nav ul li a:hover {
+            background-color: #575757;
         }
-        .contact-details .info {
-            margin-bottom: 10px;
-        }
+
+        
+
+        /* Contact form styling */
         .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #fff;
+            max-width: 800px;
+            margin: 40px auto;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
+
+        .contact-form h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .contact-form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
         .contact-form input, .contact-form textarea {
             width: 100%;
             padding: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             border: 1px solid #ddd;
-            border-radius: 4px;
+            border-radius: 5px;
+            box-sizing: border-box;
         }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
         .contact-form button {
-            padding: 10px 20px;
-            background-color: #333;
+            background-color: #04AA6D;
             color: white;
+            padding: 10px 20px;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
+            font-size: 1.2em;
         }
+
         .contact-form button:hover {
-            background-color: #555;
+            background-color: #028a57;
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #333;
+            color: white; /* Set footer text color to white */
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            margin-top: 50px; /* Add spacing above the footer */
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-about, .footer-quick-links, .footer-contact {
+            flex: 1;
+            min-width: 250px;
+            margin: 10px;
+            text-align: left;
+        }
+
+        .footer-about p {
+            margin-bottom: 10px;
+        }
+
+        .footer-quick-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-quick-links ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-quick-links ul li a {
+            color: white; /* Ensure links in the footer are white */
+            text-decoration: none;
+        }
+
+        .footer-quick-links ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-contact a {
+            color: white; /* Ensure links in the footer are white */
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* Adjust for small screens */
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -74,50 +168,53 @@
         </nav>
     </header>
 
-    <main class="contact-container">
+    <!-- Contact Form -->
+    <div class="contact-form">
         <h2>Contact Us</h2>
-        <p>Contact Us Anytime - Our Friendly Team Is Here to Assist You Round the Clock.</p>
-        
-        <div class="contact-details">
-            <div class="info">
-                <h3>Location</h3>
-                <p>19, Rn Mukherjee Road, Mezzanine Floor Between 2nd And 1st, Hanuman Estate, Kolkata – 700001, West Bengal</p>
-            </div>
-            <div class="info">
-                <h3>Email</h3>
-                <p><a href="mailto:support@snvstocks.com">support@snvstocks.com</a></p>
-            </div>
-            <div class="info">
-                <h3>WhatsApp Us</h3>
-                <p><a href="https://wa.me/9830022067">9830022067</a></p>
-            </div>
-            <div class="info">
-                <h3>Phone</h3>
-                <p><a href="tel:98380022067">98380022067</a></p>
-            </div>
-            <div class="info">
-                <h3>Office Hour</h3>
-                <p>09:00 AM – 06:00 PM</p>
-            </div>
-        </div>
+        <form action="php/contact-form-handler.php" method="post">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
 
-        <div class="contact-form">
-            <h3>Let's Talk</h3>
-            <form id="contact-form">
-                <input type="text" id="name" placeholder="Name" required>
-                <input type="email" id="email" placeholder="Email" required>
-                <input type="tel" id="mobile" placeholder="Mobile" required>
-                <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-    </main>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
 
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone">
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <p>News update: Recent Calendar</p>
-        <p>Note: On coming days, we will add Tutorial classes.</p>
+        <div class="footer-container">
+            <div class="footer-about">
+                <p><strong>SNV STOCKS</strong></p>
+                <p>At SNV STOCKS BROKING PVT LTD, we empower you to navigate the dynamic world of investments with confidence and clarity. As seasoned experts in the financial markets, we offer personalized guidance and tailored solutions to help you achieve your investment goals.</p>
+            </div>
+            <div class="footer-quick-links">
+                <p><strong>Quick Links</strong></p>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="why-choose-us.html">Why Choose Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="graphs.html">Stock Graphs</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <p><strong>Get in Touch</strong></p>
+                <p>19, Rn Mukherjee Road, Mezzanine Floor Between 2nd And 1st, Hanuman Estate, Kolkata – 700001, West Bengal</p>
+                <p>Email: <a href="mailto:support@snvstocks.com">support@snvstocks.com</a></p>
+                <p>Phone: <a href="tel:9830022067">9830022067</a></p>
+                <p>Business Hours: 09:00 AM – 06:00 PM</p>
+            </div>
+        </div>
+        <p>&copy; 2024 MF Website. All rights reserved.</p>
     </footer>
-
-    <script src="js/script.js"></script>
 </body>
 </html>
