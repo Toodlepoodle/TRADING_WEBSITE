@@ -63,7 +63,7 @@ nav li a:hover:not(.active) {
   right: 100%;  /* Start from right outside the viewport */
   font-size: 24px;
   color: black;
-  animation: scrollText 10s linear infinite;  /* Animate for 10 seconds */
+
 }
 
 @keyframes scrollText {

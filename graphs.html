@@ -53,7 +53,8 @@
             height: 400px;
         }
 
-        footer {
+       /* Footer styling */
+       footer {
             background-color: #333;
             color: white;
             padding: 20px;
@@ -62,15 +63,61 @@
             width: 100%;
             margin-top: 50px;
         }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-about, .footer-quick-links, .footer-contact {
+            flex: 1;
+            min-width: 250px;
+            margin: 10px;
+            text-align: left;
+        }
+
+        .footer-about p, .footer-quick-links ul li, .footer-contact p {
+            margin-bottom: 10px;
+        }
+
+        .footer-quick-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer-quick-links ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-quick-links ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-contact a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="banner">
             <img src="images/images.jpg" alt="Banner Image">
-        </div>
-        <div class="logo-section">
-            <p>AXIS Securities<br>Authorized Partner</p>
         </div>
         <nav>
             <ul>
@@ -112,14 +159,12 @@
                 </ul>
             </div>
             <div class="footer-contact">
-                <p><strong>Get in Touch</strong></p>
-                <p>19, Rn Mukherjee Road, Mezzanine Floor Between 2nd And 1st, Hanuman Estate, Kolkata – 700001, West Bengal</p>
-                <p>Email: <a href="mailto:support@snvstocks.com">support@snvstocks.com</a></p>
-                <p>Phone: <a href="tel:9830022067">9830022067</a></p>
-                <p>Business Hours: 09:00 AM – 06:00 PM</p>
+                <p><strong>Contact Us</strong></p>
+                <p>Address: 123 Financial Street, Mumbai, India</p>
+                <p>Phone: +91 123 456 7890</p>
+                <p>Email: <a href="mailto:info@snvstocks.com">info@snvstocks.com</a></p>
             </div>
         </div>
-        <p>&copy; 2024 MF Website. All rights reserved.</p>
     </footer>
 
     <script src="js/script.js"></script>
