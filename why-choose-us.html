@@ -30,31 +30,36 @@
             background-color: #575757;
         }
 
-        /* Carousel section */
+        /* Carousel section - Full width and right below the navbar */
         .carousel {
             position: relative;
+            background-image: url('IMAGES/home_page_image.jpg');
+            background-size: cover; /* Ensure the image covers the entire carousel */
+            background-position: center; /* Center the image */
             width: 100%;
-            height: 300px;
-            background-color: #333;
-            color: black; /* Set text color to black */
+            height: 300px; /* Height remains unchanged */
+            color: white;
             text-align: center;
             display: flex;
             justify-content: center;
             align-items: center;
             font-size: 2em;
+            margin: 0; /* Ensures there's no margin between carousel and navbar */
+            padding: 0;
+            font-weight: bold;
         }
 
         .carousel-content {
             display: none;
             width: 100%;
             text-align: center;
+            background-color: rgba(0, 0, 0, 0);
         }
 
         .carousel-content.active {
             display: block;
-            color: black; /* Set text color to black */
         }
-
+        
         /* Core Values and Services Styling */
         .core-values, .services, .testimonials, .why-choose-us, .newsletter {
             max-width: 1200px;
