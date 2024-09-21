@@ -66,16 +66,18 @@ nav li a:hover:not(.active) {
   }
 }
 
-/* Banner styles to make it full-width */
-.banner {
-  position: absolute;  /* Distance from the top */
-  left: 10px; /* Distance from the left */
+/* Logo styles to position it above the nav bar */
+.logo {
+    position: absolute;  /* Positioning to overlap with the banner */
+    left: 10px;          /* Distance from the left */
+    top: 10px;           /* Distance from the top */
 }
 
-.banner img {
-  width: 100px;  /* Adjust the size of the image */
-  height: auto;  /* Maintain aspect ratio */
+.logo img {
+    width: 100px;        /* Adjust the size of the logo image */
+    height: auto;        /* Maintain aspect ratio */
 }
+
 
 /* Main content styling */
 main {
