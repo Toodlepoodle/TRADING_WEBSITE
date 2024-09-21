@@ -78,6 +78,20 @@ nav li a:hover:not(.active) {
     height: auto;        /* Maintain aspect ratio */
 }
 
+header {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center the logo and navbar */
+}
+
+.logo-container {
+    margin-bottom: 10px; /* Space between logo and navbar */
+}
+
+.logo-container img {
+    width: 80px; /* Adjust the logo size */
+    height: auto; /* Maintain aspect ratio */
+}
 
 /* Main content styling */
 main {
