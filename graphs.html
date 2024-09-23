@@ -106,6 +106,25 @@
             text-decoration: underline;
         }
 
+        header {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: flex-start; /* Align items to the left */
+  padding: 0px; /* Optional: add some padding */
+}
+
+.logo {
+  margin-bottom: 0; /* Space between logo and nav */
+}
+
+.logo img {
+  width: 100px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+
+
         @media (max-width: 768px) {
             .footer-container {
                 flex-direction: column;
@@ -117,8 +136,8 @@
 <body>
     <header>
         <div class="logo">
-        <img src="/TRADING_WEBSITE/IMAGES/images.jpg" alt="Logo"> <!-- Adjust height as needed -->
-        </div>  
+        <img src="/IMAGES/images.jpg" alt="Logo"> <!-- Adjust height as needed -->
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
