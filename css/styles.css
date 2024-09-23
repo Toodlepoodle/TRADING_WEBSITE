@@ -74,13 +74,22 @@ header {
     align-items: center; /* Center the logo and navbar */
 }
 
+/* Logo styles to position it above the nav bar on the top left */
 .logo-container {
-    margin-bottom: 10px; /* Space between logo and navbar */
+    position: absolute;
+    top: 10px;  /* Adjust to set distance from the top */
+    left: 10px; /* Adjust to set distance from the left */
 }
 
 .logo-container img {
-    width: 80px; /* Adjust the logo size */
+    width: 60px; /* Reduce the logo size if necessary */
     height: auto; /* Maintain aspect ratio */
+}
+
+nav {
+    margin-top: 80px; /* Ensure the nav bar clears the logo space */
+    padding-top: 0px;
+    width: 100%;
 }
 
 /* Main content styling */
