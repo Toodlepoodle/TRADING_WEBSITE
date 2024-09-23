@@ -4,6 +4,32 @@ body {
   padding: 0;
   line-height: 1.6;
   background-color: white;
+  position: relative; /* Ensure body is the reference for absolute positioning */
+}
+
+.logo-container {
+  position: absolute;
+  top: 10px;  /* Adjust to set distance from the top */
+  left: 10px; /* Adjust to set distance from the left */
+}
+
+.logo-container img {
+  width: 60px; /* Reduce the logo size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+nav {
+  padding-top: 0;
+  width: 100%;
+  margin-top: 70px; /* Adjust this based on logo height */
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2813cb; /* Dark background for navigation */
 }
 
 .qqw {
@@ -23,18 +49,7 @@ body {
   margin: 0;
 }
 
-nav {
-  padding-top: 0px;
-  width: 100%;
-}
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #2813cb; /* Dark background for navigation */
-}
 
 nav ul li {
   float: left;
@@ -74,23 +89,7 @@ header {
     align-items: center; /* Center the logo and navbar */
 }
 
-/* Logo styles to position it above the nav bar on the top left */
-.logo-container {
-    position: absolute;
-    top: 10px;  /* Adjust to set distance from the top */
-    left: 10px; /* Adjust to set distance from the left */
-}
 
-.logo-container img {
-    width: 60px; /* Reduce the logo size if necessary */
-    height: auto; /* Maintain aspect ratio */
-}
-
-nav {
-    margin-top: 80px; /* Ensure the nav bar clears the logo space */
-    padding-top: 0px;
-    width: 100%;
-}
 
 /* Main content styling */
 main {
