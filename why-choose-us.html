@@ -364,17 +364,18 @@ header {
     <footer>
         <div class="footer-container">
             <div class="footer-about">
-                <p><strong>SNV STOCKS</strong></p>
-                <p>At SNV STOCKS BROKING PVT LTD, we empower you to navigate the dynamic world of investments with confidence and clarity. As seasoned experts in the financial markets, we offer personalized guidance and tailored solutions to help you achieve your investment goals.</p>
+                <p><strong>Moolance Finance</strong></p>
+                <p>Moonlance Finance is a dynamic stock broking company dedicated to empowering investors with a comprehensive range of financial solutions. With a focus on innovation and customer service, we provide advanced tools, expert insights, and personalized support to help you navigate the complexities of the financial markets. Our diverse offerings, from equities and mutual funds to life insurance and retirement planning, cater to the unique needs of every investor. At Moonlance Finance, we strive to be your trusted partner on your journey to financial success.</p>
             </div>
             <div class="footer-quick-links">
                 <p><strong>Quick Links</strong></p>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="why-choose-us.html">Why Us</a></li>
-                    <li><a href="services.html">Products/Services</a></li>
+                    <li><a href="why-choose-us.html">Why Choose Us</a></li>
+                    <li><a href="services.html">Services</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
                     <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="graphs.html">Stock Graphs</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
@@ -385,11 +386,60 @@ header {
                 <p>Business Hours: 09:00 AM – 06:00 PM</p>
             </div>
         </div>
-        <p>© 2024 SNV Stocks. All Rights Reserved.</p>
-        <p>Follow Us:</p>
-        <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">YouTube</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a>
+        <p>&copy; 2024 MF Website. All rights reserved.</p>
     </footer>
     
-    <script src="js/script.js"></script>
-</body>
-</html>
+        <script>
+            function updateAmountValue() {
+                document.getElementById('amount-value').innerText = document.getElementById('amount').value;
+            }
+    
+            function updateRateValue() {
+                document.getElementById('rate-value').innerText = document.getElementById('rate').value;
+            }
+    
+            function updateYearsValue() {
+                document.getElementById('years-value').innerText = document.getElementById('years').value;
+            }
+    
+            function calculateSIP() {
+                const amount = parseFloat(document.getElementById('amount').value);
+                const rate = parseFloat(document.getElementById('rate').value) / 100 / 12;
+                const years = parseInt(document.getElementById('years').value);
+                const months = years * 12;
+    
+                let futureValue = 0;
+                for (let i = 0; i < months; i++) {
+                    futureValue = (futureValue + amount) * (1 + rate);
+                }
+    
+                document.getElementById('sip-result').innerHTML = `Future Value: ₹${futureValue.toFixed(2)}`;
+            }
+    
+            // Carousel functionality
+            let slideIndex = 0;
+    
+            function showSlide(index) {
+                const slides = document.getElementsByClassName('carousel-content');
+                if (index >= slides.length) slideIndex = 0;
+                if (index < 0) slideIndex = slides.length - 1;
+                for (let slide of slides) {
+                    slide.classList.remove('active');
+                }
+                slides[slideIndex].classList.add('active');
+            }
+    
+            function nextSlide() {
+                showSlide(++slideIndex);
+            }
+    
+            function prevSlide() {
+                showSlide(--slideIndex);
+            }
+    
+            // Initialize carousel
+            showSlide(slideIndex);
+            setInterval(nextSlide, 5000); // Change slide every 5 seconds
+        </script>
+    </body>
+    </html>
