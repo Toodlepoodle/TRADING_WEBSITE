@@ -6,6 +6,12 @@
     <title>MF Website - Why Choose Us</title>
     <link rel="stylesheet" href="css/styles.css">
     <style>
+        /* Remove any padding/margin from the body and main content */
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+
         /* Navigation styling */
         nav ul {
             list-style-type: none;
@@ -21,7 +27,7 @@
         }
 
         nav ul li a {
-            color: white; /* Set text color to black */
+            color: white;
             text-decoration: none;
             font-size: 16px;
         }
@@ -59,6 +65,27 @@
         .carousel-content.active {
             display: block;
         }
+
+        /* Buttons for carousel navigation */
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .carousel-button.prev {
+            left: 0;
+        }
+
+        .carousel-button.next {
+            right: 0;
+        }
+
         
         /* Core Values and Services Styling */
         .core-values, .services, .testimonials, .why-choose-us, .newsletter {
@@ -96,8 +123,7 @@
             background-color: #f4f4f4;
         }
 
-        /* Footer styling */
-/* Footer styling */
+      /* Footer styling */
 footer {
     background-color: #333;
     color: white; /* Set footer text color to white */
@@ -155,48 +181,98 @@ footer {
 }
 
 header {
-  display: flex;
-  flex-direction: column; /* Stack children vertically */
-  align-items: flex-start; /* Align items to the left */
-  padding: 0px; /* Optional: add some padding */
+    display: flex; /* Use flexbox for the header */
+    align-items: center; /* Center items vertically */
+    padding: 10px; /* Add padding for aesthetics */
+    width: 100%; /* Ensure header spans the full width */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .logo {
-  margin-bottom: 0; /* Space between logo and nav */
+    margin-right: 450px; /* Push the logo slightly to the right */
+    margin-left: 30px;
 }
 
 .logo img {
-  width: 100px; /* Adjust logo size */
-  height: auto; /* Maintain aspect ratio */
+    width: 110px; /* Maintain original logo width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.contact-info {
+    display: flex; /* Use flexbox for contact info to align elements */
+    flex-grow: 1; /* Allow contact info to grow to fill space */
+    justify-content: space-around; /* Evenly space child elements */
+}
+
+.contact-details {
+    display: flex; /* Use flexbox for contact details */
+    flex-direction: column; /* Stack contact details vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.contact-info p {
+    margin: 0; /* No margin for paragraph */
+    font-size: 18px; /* Font size */
+}
+
+.call-info {
+    display: flex; /* Align button and text in a row */
+    flex-direction: column; /* Stack button and text vertically */
+    align-items: right; /* Center items horizontally */
+}
+
+.call-button {
+    display: inline-block; /* Ensure it behaves like a block element */
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline from anchor */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for button */
+    cursor: pointer; /* Pointer on hover */
+    margin-top: 5px; /* Space above the button */
+    border-radius: 4px; /* Optional: add border radius for rounded corners */
+}
+
+.call-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
 
-/* Adjust for small screens */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
+        /* Adjust for small screens */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+            }
 
+            .contact-info {
+                text-align: center;
+                margin-top: 10px;
+            }
 
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
         }
-
-        main {
-            flex: 1;
-        }
-
     </style>
 </head>
 <body>
     <header>
         <div class="logo">
-        <img src="/IMAGES/images.jpg" alt="Logo"> <!-- Adjust height as needed -->
-        </div>  
+            <img src="IMAGES/images.jpg" alt="Logo">
+        </div>
+        <div class="contact-info">
+            <div class="contact-details">
+                <p>Support: +91-9830022067</p>
+                <p>Email: support@snvstocks.com</p>
+            </div>
+            <div class="call-info">
+                <a href="contact.html" class="call-button">Book A Call</a>
+                <p>Authorised Person</p>
+            </div>
+        </div>
+    </header>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -207,7 +283,7 @@ header {
                 <li><a href="graphs.html">Stock Graphs</a></li>
             </ul>
         </nav>
-    </header>
+    
 
     <div class="carousel">
         <div class="carousel-content active">
