@@ -195,7 +195,7 @@ header {
 
 .contact-info p {
     margin: 0; /* No margin for paragraph */
-    font-size: 18px; /* Font size */
+    font-size: 16px; /* Font size */
 }
 
 .call-info {
@@ -218,6 +218,19 @@ header {
 
 .call-button:hover {
     background-color: #0056b3; /* Darker blue on hover */
+}
+/* Axis Bank logo styling */
+.axis-logo {
+    width: 50px; /* Set the size of the Axis Bank logo */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 5px; /* Add some spacing below the logo */
+}
+
+/* Authorised person text styling */
+.authorised-person {
+    display: flex;
+    flex-direction: column; /* Stack logo and text vertically */
+    align-items: center; /* Center align the items */
 }
 
 
@@ -252,10 +265,15 @@ header {
             </div>
             <div class="call-info">
                 <a href="contact.html" class="call-button">Book A Call</a>
-                <p>Authorised Person</p>
             </div>
+                <div class="authorised-person">
+                    <img src="IMAGES/axis_bank.png" alt="Axis Bank Logo" class="axis-logo">
+                    <p>Authorised</p>
+                    <p>Person</p>
+                </div>
+            
         </div>
-    </header>   
+    </header>  
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
